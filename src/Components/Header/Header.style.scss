@@ -1,0 +1,28 @@
+.header {
+  a {
+    text-decoration: none;
+  }
+  position: sticky;
+  top: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 20vh;
+  width: 100vw;
+  border-radius: 10px;
+  .icon {
+    span {
+      transform: scale(20x);
+      font-weight: bolder;
+      font-style: italic;
+    }
+  }
+
+  .options {
+    transform: translate(-100px, 20px);
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+  }
+}

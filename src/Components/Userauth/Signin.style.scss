@@ -1,0 +1,18 @@
+.signinComponent {
+  transform: translateY(15vh);
+  h2 {
+    transform: translateX(6vw);
+  }
+  h5 {
+    transform: translateX(2vw);
+    margin: 8px;
+  }
+  h6 {
+    color: red;
+    transform: translateX(4vw);
+    margin: 5px;
+  }
+  button {
+    transform: translateX(2vw);
+  }
+}

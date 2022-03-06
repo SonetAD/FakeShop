@@ -1,0 +1,32 @@
+$sub-color: #333;
+$main-color: black;
+
+.forminput {
+  .shirnk {
+    transition: all 300ms;
+    display: none;
+  }
+  .input {
+    margin: 10px;
+    border-radius: 10px;
+    &:focus ~ .shirnk {
+      display: inline-block;
+      color: $sub-color;
+      background-color: white;
+      margin-top: -10px;
+      margin-left: 5px;
+      margin-right: 5px;
+      top: -15px;
+      font-size: initial;
+      font-weight: bolder;
+      font-size: 10px;
+    }
+  }
+  .label {
+    position: relative;
+    font-size: 15px;
+    &:hover {
+      cursor: text;
+    }
+  }
+}
