@@ -4,7 +4,7 @@ import './Collectionpreview.style.scss';
 export default function Collectionpreview({ title, items }) {
   return (
     <div className='collectionpreview'>
-      <h1>{title}</h1>
+      <h1 className='itemName'>{title}</h1>
       <div className='preview'>
         {items
           .filter((item, index) => index <= 3)
