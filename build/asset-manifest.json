@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/FakeShop/static/css/main.fff92df3.css",
-    "main.js": "/FakeShop/static/js/main.6a4a5c50.js",
+    "main.js": "/FakeShop/static/js/main.f211d86d.js",
     "static/media/men.png": "/FakeShop/static/media/men.f5494c285dd4e9608e37.png",
     "static/media/sneakers.png": "/FakeShop/static/media/sneakers.723f3fa6192f745f2a9d.png",
     "static/media/women.png": "/FakeShop/static/media/women.c23cf8a2d03ed84919d5.png",
@@ -44,10 +44,10 @@
     "static/media/adidas-nmd.png": "/FakeShop/static/media/adidas-nmd.415c0feda33c300d1645.png",
     "index.html": "/FakeShop/index.html",
     "main.fff92df3.css.map": "/FakeShop/static/css/main.fff92df3.css.map",
-    "main.6a4a5c50.js.map": "/FakeShop/static/js/main.6a4a5c50.js.map"
+    "main.f211d86d.js.map": "/FakeShop/static/js/main.f211d86d.js.map"
   },
   "entrypoints": [
     "static/css/main.fff92df3.css",
-    "static/js/main.6a4a5c50.js"
+    "static/js/main.f211d86d.js"
   ]
 }
