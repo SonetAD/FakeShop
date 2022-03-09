@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.01656ba2.css",
-    "main.js": "/static/js/main.20db2bcd.js",
+    "main.css": "/static/css/main.cdd4efb5.css",
+    "main.js": "/static/js/main.90515202.js",
     "static/media/men.png": "/static/media/men.f5494c285dd4e9608e37.png",
     "static/media/sneakers.png": "/static/media/sneakers.723f3fa6192f745f2a9d.png",
     "static/media/women.png": "/static/media/women.c23cf8a2d03ed84919d5.png",
@@ -43,11 +43,11 @@
     "static/media/nike-funky.png": "/static/media/nike-funky.2db569c65f6166dafc83.png",
     "static/media/adidas-nmd.png": "/static/media/adidas-nmd.415c0feda33c300d1645.png",
     "index.html": "/index.html",
-    "main.01656ba2.css.map": "/static/css/main.01656ba2.css.map",
-    "main.20db2bcd.js.map": "/static/js/main.20db2bcd.js.map"
+    "main.cdd4efb5.css.map": "/static/css/main.cdd4efb5.css.map",
+    "main.90515202.js.map": "/static/js/main.90515202.js.map"
   },
   "entrypoints": [
-    "static/css/main.01656ba2.css",
-    "static/js/main.20db2bcd.js"
+    "static/css/main.cdd4efb5.css",
+    "static/js/main.90515202.js"
   ]
 }
