@@ -8,7 +8,7 @@ const Menuitem = ({ title, link, img, id }) => {
   return (
     <div
       onClick={(e) => {
-        navigate(`/${link}`);
+        navigate(`/collection/${link}`);
         e.preventDefault();
       }}
       style={{

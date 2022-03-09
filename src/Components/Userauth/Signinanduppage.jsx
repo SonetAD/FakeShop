@@ -1,9 +1,8 @@
 import './Signinanduppage.style.scss';
 import Signin from './Signin.component';
 import Signup from './Signup.component';
-import withAuth from '../../Firebase/Auth';
 
-function Signinandup() {
+export default function Signinandup() {
   return (
     <div className='signinanduppage'>
       <Signin />
@@ -11,5 +10,3 @@ function Signinandup() {
     </div>
   );
 }
-
-export default withAuth(Signinandup);

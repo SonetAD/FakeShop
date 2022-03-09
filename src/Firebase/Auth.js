@@ -8,7 +8,7 @@ import {
   onAuthStateChanged,
   createUserWithEmailAndPassword,
 } from 'firebase/auth';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import firebaseApp from './Firebase.util';
 import react from 'react';
 
@@ -18,14 +18,17 @@ function Auth() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const auth = getAuth(firebaseApp);
+
   let authStateChange = async (handleChange) => {
     await onAuthStateChanged(auth, handleChange);
   };
-  useEffect(() => {
-    return () => {
-      authStateChange = null;
-    };
+  authStateChange((user) => {
+    setName(user.displayName);
+    setEmail(user.email);
   });
+  function unsubscribe() {
+    authStateChange = null;
+  }
   async function Signup(userName, email, password) {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
@@ -40,6 +43,7 @@ function Auth() {
         }
       }
       authStateChange(handleAuthChange);
+      unsubscribe();
     } catch (error) {
       console.log(error);
     }
@@ -50,9 +54,9 @@ function Auth() {
       function handleAuthChange(user) {
         setName(user.displayName);
         setEmail(user.email);
-        console.log(user.displayName);
       }
       authStateChange(handleAuthChange);
+      unsubscribe();
     } catch (error) {
       console.log(error);
     }
@@ -64,17 +68,21 @@ function Auth() {
       function handleAuthChange(user) {
         setName(user.displayName);
         setEmail(user.email);
-        console.log(user.displayName);
       }
       authStateChange(handleAuthChange);
-    } catch (error) {
-      console.log(error);
-    }
+      unsubscribe();
+    } catch (error) {}
   }
   async function Signout() {
     try {
-      const msg = await signOut(auth);
-      console.log(msg);
+      await signOut(auth);
+      function handleAuthChange(user) {
+        setName(null);
+        setEmail(null);
+      }
+      authStateChange(handleAuthChange);
+      console.log(authStateChange);
+      unsubscribe();
     } catch (error) {
       console.log(error);
     }
@@ -87,13 +95,15 @@ function Auth() {
     Signin,
     Signout,
     SigninWithGoogle,
+    unsubscribe,
   };
 }
 
 export default function withAuthContext(component) {
+  const App = new component();
   return () => {
     return (
-      <AuthContext.Provider value={Auth()}>{component()}</AuthContext.Provider>
+      <AuthContext.Provider value={Auth()}>{App.render()}</AuthContext.Provider>
     );
   };
 }

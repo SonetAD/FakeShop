@@ -22,6 +22,7 @@ export default class Signin extends Component {
   handleGoogleSignin = (e) => {
     e.preventDefault();
     let auth = this.context;
+    console.log(auth);
     auth.SigninWithGoogle();
   };
   handleChange = (e) => {
