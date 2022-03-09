@@ -22,6 +22,7 @@ class App extends Component {
           <Route path='/shop' element={<Shop />} />
           <Route path='/signin' element={<Signinandup />} />
           <Route path='/signout' element={<Navigate to='/' />} />
+          <Route path='/FakeShop' element={<Navigate to='/' />} />
           <Route path='*' element={<Errorpage />} />
         </Routes>
       </>
