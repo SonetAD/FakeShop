@@ -5,7 +5,6 @@ export default function Button({
   children,
   handleClick = (e) => {
     e.preventDefault();
-    console.log('clicked');
   },
   ...otherProps
 }) {

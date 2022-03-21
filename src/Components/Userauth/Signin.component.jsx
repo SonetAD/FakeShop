@@ -9,15 +9,32 @@ export default class Signin extends Component {
   state = {
     email: '',
     password: '',
+    warningEmail: '',
+    warningPassword: '',
+    auth: this.context,
   };
   handleSubmit = (e) => {
-    let auth = this.context;
-    auth.Signin(this.state.email, this.state.password);
-    this.setState({
-      email: '',
-      password: '',
-    });
     e.preventDefault();
+    this.state.auth.Signin(this.state.email, this.state.password);
+
+    console.log(this.state.auth);
+
+    console.log('error checking');
+    console.log(this.state.auth.error);
+
+    if (this.state.auth.error === 'noerror') {
+      console.log('lala');
+      this.setState({
+        email: '',
+        password: '',
+        warningEmail: '',
+        warningPassword: '',
+      });
+    } else {
+      if (this.state.auth.error.includes('user-not-found')) {
+        console.log('fuck');
+      }
+    }
   };
   handleGoogleSignin = (e) => {
     e.preventDefault();

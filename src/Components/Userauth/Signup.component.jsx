@@ -13,9 +13,11 @@ export default class Signup extends Component {
     warning: '',
   };
   handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
+    console.log('submited');
     if (this.state.newPassword === this.state.confirmPassword) {
       let auth = this.context;
+      console.log(auth);
       auth.Signup(this.state.name, this.state.email, this.state.newPassword);
       this.setState({
         name: '',
@@ -41,7 +43,7 @@ export default class Signup extends Component {
       <div className='signupComponent'>
         <h2>Sign up</h2>
         <h5>Create a new account</h5>
-        <form onSubmit={this.handleSubmit}>
+        <form>
           <Forminput
             size='md'
             label='Name'
@@ -84,7 +86,7 @@ export default class Signup extends Component {
             color='white'
             hbgColor='white'
             hColor='#333'
-            type='submit'
+            handleClick={this.handleSubmit}
           >
             Sign up
           </Button>
